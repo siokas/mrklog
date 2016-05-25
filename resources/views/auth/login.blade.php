@@ -149,7 +149,7 @@
 </div>
 
   <script src="{{ asset('js/jquery.min.js') }}"></script>
-  <script src="{{ asste('js/index.js') }}"></script>
+  <script src="{{ asset('js/index.js') }}"></script>
 
   </body>
 </html>
