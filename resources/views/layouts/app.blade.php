@@ -10,13 +10,13 @@
         {{-- IMPORT CSS STYLES --}}
         @include('imports.css')
 
-        <script src="/js/marked.js"></script>
+        <script src="{{ asset('js/marked.js') }}"></script>
 
         {{-- PRE-IMPORT NEEDED JS SCRIPTS --}}
         @if($page == 'create' || $page == 'edit')
             
-            <script src="/js/jquery.min.js"></script>
-            <script src="/js/prevent_submit_on_enter.js"></script>
+            <script src="{{ asset('js/jquery.min.js') }}"></script>
+            <script src="{{ asset('js/prevent_submit_on_enter.js') }}"></script>
         @endif
     </head>
 

@@ -2,7 +2,6 @@
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/flexslider.min.js') }}"></script>
 <script src="{{ asset('js/lightbox.min.js') }}"></script>
-<script src="{{ asset('js/twitterfetcher.min.js') }}"></script>
 <script src="{{ asset('js/spectragram.min.js') }}"></script>
 <script src="{{ asset('js/smooth-scroll.min.js') }}"></script>
 <script src="{{ asset('js/jquery.plugin.min.js') }}"></script>

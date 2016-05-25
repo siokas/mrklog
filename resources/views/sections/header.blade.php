@@ -9,7 +9,7 @@
                         <h1><span style="font-family: 'Molle', cursive; color: #559dee;">Update Post</span></h1>
                     @elseif($page == "main")
                     	{{-- <h1><span style="font-family: 'Molle', cursive;">mrk<span style="color: #559dee;">log</span></span></h1> --}}
-                        <img src="/img/logo.png" width="320" style="margin-bottom: 5px;">
+                        <img src="{{ asset('img/logo.png') }}" width="320" style="margin-bottom: 5px;">
                         <div class="searchform cf">
                           <input type="text" v-model="keywords" name="keywords" id="keywords" placeholder="keywords, authors or tags" v-on:click="fetchPosts(0)">
                         </div>

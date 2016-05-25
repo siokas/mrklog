@@ -26,7 +26,7 @@
 <style>
 	@font-face{
 	    font-family: Molle; 
-		src: url('/fonts/Molle-Regular.ttf');
+		src: url({{asset('fonts/Molle-Regular.ttf')}});
 	}
 </style>
 
