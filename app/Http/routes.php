@@ -56,7 +56,7 @@ Route::delete('user/delete', 'AppController@delete_account')->name('user.delete'
 |
  */
 Route::post('posts/{id}/edit', 'PostController@edit');
-Route::post('send', 'EmailController@send')->name('email');
+Route::post('send', 'MessageController@send')->name('message');
 Route::post('settings', 'AppController@save_settings')->name('save.settings');
 
 /*
@@ -147,74 +147,3 @@ Route::group(['prefix' => 'api'], function(){
 	Route::get('post/{id}', 'ApiController@postWithSpesificId');
 	Route::get('popular', 'ApiController@popularPosts');
 });
-
-// Route::group(['prefix' => 'api'], function () {
-
-// 	Route::group(['prefix' => 'withPagination'], function () {
-
-// 		Route::get('/posts', function () {
-// 		    $results =  Post::latest()->paginate(5);
-// 		    $response = [
-// 		        'pagination' => [
-// 		            'total' => $results->total(),
-// 		            'per_page' => $results->perPage(),
-// 		            'current_page' => $results->currentPage(),
-// 		            'last_page' => $results->lastPage(),
-// 		            'from' => $results->firstItem(),
-// 		            'to' => $results->lastItem()
-// 		        ],
-// 		        'data' => $results
-// 		    ];
-		    
-// 		    return $response;
-// 		});
-
-// 		Route::get('/user/{name}', function ($name) {
-// 		    $results =  Post::where('author', $name)->latest()->paginate(5);
-// 		    $response = [
-// 		        'pagination' => [
-// 		            'total' => $results->total(),
-// 		            'per_page' => $results->perPage(),
-// 		            'current_page' => $results->currentPage(),
-// 		            'last_page' => $results->lastPage(),
-// 		            'from' => $results->firstItem(),
-// 		            'to' => $results->lastItem()
-// 		        ],
-// 		        'data' => $results
-// 		    ];
-		    
-// 		    return $response;
-// 		});
-
-// 		Route::get('/tag/{name}', function ($name) {
-// 			$results =  Post::withAnyTag([$name])->latest()->paginate(5);
-// 		    $response = [
-// 		        'pagination' => [
-// 		            'total' => $results->total(),
-// 		            'per_page' => $results->perPage(),
-// 		            'current_page' => $results->currentPage(),
-// 		            'last_page' => $results->lastPage(),
-// 		            'from' => $results->firstItem(),
-// 		            'to' => $results->lastItem()
-// 		        ],
-// 		        'data' => $results
-// 		    ];
-		    
-// 		    return $response;
-// 		});
-
-// 	});
-
-	
-
-// 	Route::get('/post/{id}', function($id){
-// 		return Post::where('id', $id)->get();
-// 	});
-
-	
-
-// 	Route::get('/popular', function(){
-// 		return Post::popular();
-// 	});
-
-// });

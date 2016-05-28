@@ -5,7 +5,7 @@
     	{{-- IMPORT META TAGS --}}
         @include('imports.meta')
 
-        <title>Marklog</title>
+        <title>arklog</title>
 
         {{-- IMPORT CSS STYLES --}}
         @include('imports.css')
