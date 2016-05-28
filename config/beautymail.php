@@ -25,11 +25,11 @@ return [
 
         'logo'        => [
             'path'   => '%PUBLIC%/img/logo.png',
-            'width'  => '',
-            'height' => '',
+            'width'  => '320',
+            'height' => '70',
         ],
 
-        'twitter'  => null,
+        'twitter'  => '#',
         'facebook' => null,
         'flickr'   => null,
     ],

@@ -18,6 +18,13 @@ Route::get('contact', 'AppController@contact');
 Route::get('settings', 'AppController@settings');
 Route::get('pin/{id}', 'AppController@pin');
 Route::get('terms', 'AppController@terms');
+Route::get('t', function(){
+	return view('emails.welcome')->withConfirmationCode('da');
+});
+Route::get('p', function(){
+	Artisan::call('migrate:refresh', [
+    '--force' => true,]);
+});
 
 Route::get('fam', function(){
 	dd(Setting::all());
