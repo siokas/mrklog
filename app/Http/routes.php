@@ -18,16 +18,13 @@ Route::get('contact', 'AppController@contact');
 Route::get('settings', 'AppController@settings');
 Route::get('pin/{id}', 'AppController@pin');
 Route::get('terms', 'AppController@terms');
-Route::get('t', function(){
-	return view('emails.welcome')->withConfirmationCode('da');
-});
+
 Route::get('p', function(){
 	Artisan::call('migrate:refresh', [
     '--force' => true,]);
 });
 
-Route::get('fam', function(){
-	dd(Setting::all());
+Route::get('popular', function(){
 	return view('pages.main')
 		->withPage('main') // This is for the blade template in order to know which section to load
 		->withContent('popular')
@@ -121,14 +118,15 @@ Route::group(['prefix' => 'test'], function () {
 
 	Route::get('/mail/send', function()
 	{
-	    $beautymail = app()->make(Snowfire\Beautymail\Beautymail::class);
-	    $beautymail->send('emails.welcome', [], function($message)
-	    {
-	        $message
-	            ->from('no-reply@mrklog.com')
-	            ->to('apostolossiokas@gmail.com', 'Apostolos Siokas')
-	            ->subject('Welcome!');
-	    });
+		$beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
+		$beautymail->send('emails.welcome', ['confirmation_code' => 'test', 'logo' => $logo], function ($message) use ($data) {
+			$message
+				->from('no-reply@mrklog.com')
+				->to('apostolossiokas@gmail.com', 'Apostolos')
+				->subject('Welcome!');
+		});
+
+	    
 
 	});
 });
