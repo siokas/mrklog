@@ -78,7 +78,7 @@
   </div>
 </div>
 
-  <script src="{{ asset('js/jquery.js') }}"></script>
+  <script src="{{ asset('js/jquery.min.js') }}"></script>
 
   <script src="{{ asset('js/index.js')}}"></script>
 
