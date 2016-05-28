@@ -3,6 +3,7 @@
 use App\Models\Post;
 use App\Models\Setting;
 
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -22,6 +23,29 @@ Route::get('terms', 'AppController@terms');
 Route::get('p', function(){
 	Artisan::call('migrate:refresh', [
     '--force' => true,]);
+});
+
+Route::get('/mail/resend', function(){
+	$data = [
+		'email' => 'apostolossiokas@gmail.com',
+		'name' => 'Apostolos Siokas'
+	];
+	
+	$logo = [
+			'path' => asset('img/logo.png'),
+			'width' => '320',
+			'height' => '70',
+		];
+
+		$beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
+		$beautymail->send('emails.welcome', ['confirmation_code' => 'test', 'logo' => $logo], function ($message) use ($data) {
+			$message
+				->from('no-reply@mrklog.com')
+				->to($data['email'], $data['name'])
+				->subject('Welcome!');
+		});
+
+		Flash::success('Hi ' . $data['name'] . '. In order to be a cerified user you have to confirm your email!');
 });
 
 Route::get('popular', function(){
@@ -98,7 +122,7 @@ Route::get('/register', function () {
 | There is a Test route that generates fake posts (using the factory create() method)
 | and two mail routes which sends a default email and returns the view of the email template
 |
- */
+ 
 Route::group(['prefix' => 'test'], function () {
 
 	Route::get('factory/', function(){
@@ -116,21 +140,10 @@ Route::group(['prefix' => 'test'], function () {
 
 	});
 
-	Route::get('/mail/send', function()
-	{
-		$logo = asset('/img/logo.jpg');
-		$beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
-		$beautymail->send('emails.welcome', ['confirmation_code' => 'test', 'logo' => $logo], function ($message){
-			$message
-				->from('no-reply@mrklog.com')
-				->to('apostolossiokas@gmail.com', 'Apostolos')
-				->subject('Welcome!');
-		});
 
-	    
-
-	});
 });
+
+*/
 
 /*
 |--------------------------------------------------------------------------

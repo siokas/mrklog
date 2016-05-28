@@ -24,7 +24,7 @@ return [
         'address'     => null,
 
         'logo'        => [
-            'path'   => '%PUBLIC%/img/logo.png',
+            'path'   => 'http://mrklog.com/img/logo.png',
             'width'  => '320',
             'height' => '70',
         ],
