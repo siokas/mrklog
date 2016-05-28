@@ -13,12 +13,12 @@ return [
     'colors' => [
 
         'highlight' => '#004ca3',
-        'button'    => '#004cad',
+        'button'    => '#559dee',
 
     ],
 
     'view' => [
-        'senderName'  => null,
+        'senderName'  => 'mrklog.com',
         'reminder'    => null,
         'unsubscribe' => null,
         'address'     => null,
@@ -29,7 +29,7 @@ return [
             'height' => '70',
         ],
 
-        'twitter'  => '#',
+        'twitter'  => 'https://twitter.com/mrklogcom',
         'facebook' => null,
         'flickr'   => null,
     ],

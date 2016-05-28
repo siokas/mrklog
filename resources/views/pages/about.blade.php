@@ -5,9 +5,10 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="font-size: 20px;">
                 <p>
-                    This is the simplest and quickest blog you've ever imagine. Just click <span style="">CREATE NEW POST</span> and start writting! That's right, you don't need to create an account for this... 
-                    Simple, Easy and Quick.
-
+                    <span style="font-family: Molle;">#mrklog</span> means <span style="color: #559dee;">M</span>a<span style="color: #559dee;">r</span><span style="color: #559dee;">k</span>down B<span style="color: #559dee;">l</span><span style="color: #559dee;">o</span><span style="color: #559dee;">g</span>. A blog that lets you write posts using markdown language. Common used language for README files, it is going to be the main language for writing simple and quick posts. But it's not only that which makes <span style="font-family: Molle;">#mrklog</span> unique. It is he simplest and quickest blog you've ever imagine. Just click <span style="">CREATE NEW POST</span> and start writting! That's right, you don't need to create an account to post an article. Simple, Easy and Quick... Start <span style="font-family: Molle;">#mrkloging</span> now!
+                </p>
+                
+                <p>
                     <blockquote cite="http://www.goodreads.com/quotes/395418-dance-above-the-surface-of-the-world-let-your-thoughts">
                         “Dance above the surface of the world. Let your thoughts lift you into creativity that is not hampered by opinion.”
                         <br />
@@ -15,7 +16,9 @@
                     </blockquote>
                 </p>
 
-                <p>Please click <a href="">here</a> to read the full <span style="font-family: Molle;">#marklog</span> guide</p>
+                <p>
+                    Please click <a href="http://mrklog.com/posts/1">here</a> to read the full <span style="font-family: Molle;">#mrklog</span> guide.
+                </p>
                
             </div>
         </div>
