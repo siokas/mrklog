@@ -104,7 +104,7 @@ class AppController extends Controller
     *
     * Returns the terms view
     */
-    public function term(){
+    public function terms(){
         
         return redirect(route('pages.terms'));
     }
