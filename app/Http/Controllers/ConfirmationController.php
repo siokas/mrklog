@@ -15,7 +15,7 @@ class ConfirmationController extends Controller {
 		$user = User::whereConfirmationCode($confirmation_code)->first();
 
 		if (!$user) {
-			return ('InvalidConfirmationCodeException');
+			return ('ErrorUserException');
 		}
 
 		$user->confirmed = 1;

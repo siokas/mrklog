@@ -17,6 +17,7 @@ Route::get('about', 'AppController@about');
 Route::get('contact', 'AppController@contact');
 Route::get('settings', 'AppController@settings');
 Route::get('pin/{id}', 'AppController@pin');
+Route::get('terms', 'AppController@terms');
 
 Route::get('fam', function(){
 	dd(Setting::all());

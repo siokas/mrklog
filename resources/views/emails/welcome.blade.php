@@ -3,19 +3,16 @@
 @section('content')
 
     @include ('beautymail::templates.sunny.heading' , [
-        'heading' => 'Hello from mrklog.com!',
+        'heading' => 'Welcome to #mrklog!',
         'level' => 'h1',
     ])
 
     @include('beautymail::templates.sunny.contentStart')
 
         <p>
-        	Thanks for creating an accountThanks for creating an accountThanksThanks for creating an accountThanksThanks for creating an account
-        	Thanks for creating an account
-        	Thanks for creating an accountThanksThanks for creating an account
-        	Thanks for creating an accountThanksThanks for creating an accountThanksThanks
-        	Thanks for creating an accountThanksThanks
-        	v;s
+        	You have succesfully created an account on #mrklog. The next step is to confirm your email address in order to be a certified #mrklog author!
+            <br />
+            Start writting...
         </p>
 
         <p>
@@ -28,7 +25,7 @@
 
     @include('beautymail::templates.sunny.button', [
             'title' => 'Confirm email',
-            'link' => 'http://mrklog.dev/register/verify/' . $confirmation_code
+            'link' => 'http://mrklog.com/register/verify/' . $confirmation_code
     ])
 
 @stop

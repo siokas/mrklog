@@ -64,7 +64,7 @@ class AppController extends Controller
 
     /*
     *
-    * Returns the settings view
+    * Saves the settings into the database
     */
     public function save_settings(Request $request){
         
@@ -89,7 +89,7 @@ class AppController extends Controller
 
     /*
     *
-    * Returns the settings view
+    * Deletes the user
     */
     public function delete_account(){
         $user = Auth::user();
@@ -98,5 +98,14 @@ class AppController extends Controller
 
         Flash::warning('Your account has been deleted! From now on you can write non-certified posts.');
         return redirect(route('posts.index'));
+    }
+
+    /*
+    *
+    * Returns the terms view
+    */
+    public function term(){
+        
+        return redirect(route('pages.terms'));
     }
 }

@@ -67,7 +67,7 @@
             </div>
             <div class="simform__actions">
               <button class="sumbit" type="sumbit">Create Account</button>
-              <span class="simform__actions-sidetext">By creating an account you agree to our <a class="special" href="#" target="_blank" role="link">Terms & Privacy</a></span>
+              <span class="simform__actions-sidetext">By creating an account you agree to our <a class="special" href="{{ url('/terms') }}" target="_blank" role="link">Terms & Privacy</a></span>
             </div>
           </form>
         </div>
