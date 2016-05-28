@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="font-size: 20px;">
 
-            	<h1>Terms and Conditions ("Terms")</h1>
+            	{{-- <h1>Terms and Conditions ("Terms")</h1> --}}
 				<p>Last updated: May 28, 2016</p>
 				<p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the http://mrklog.com website (the "Service") operated by #mrklog ("us", "we", or "our").</p>
 				<p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</p>

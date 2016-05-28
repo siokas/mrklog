@@ -19,6 +19,8 @@
                         <h1><span style="font-family: 'Molle', cursive; color: #559dee;">About</span></h1>
                     @elseif ($page == 'contact')
                         <h1><span style="font-family: 'Molle', cursive; color: #559dee;">Contact</span></h1>
+                    @elseif ($page == 'terms')
+                        <h1><span style="font-family: 'Molle', cursive; color: #559dee;">Terms and Conditions</span></h1>
                     @endif
                 </div>
             </div>
