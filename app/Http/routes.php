@@ -120,7 +120,7 @@ Route::group(['prefix' => 'test'], function () {
 	{
 		$logo = asset('/img/logo.jpg');
 		$beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
-		$beautymail->send('emails.welcome', ['confirmation_code' => 'test', 'logo' => $logo], function ($message) use ($data) {
+		$beautymail->send('emails.welcome', ['confirmation_code' => 'test', 'logo' => $logo], function ($message){
 			$message
 				->from('no-reply@mrklog.com')
 				->to('apostolossiokas@gmail.com', 'Apostolos')
