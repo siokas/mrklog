@@ -38,19 +38,19 @@ return [
 	'facebook' => [
 		'client_id' => env('FACEBOOK_APP_ID'),
 		'client_secret' => env('FACEBOOK_APP_SECRET'),
-		'redirect' => 'http://mrklog.dev/auth/facebook/callback',
+		'redirect' => 'http://mrklog.com/auth/facebook/callback',
 	],
 
 	'twitter' => [
 		'client_id' => env('TWITTER_APP_ID'),
 		'client_secret' => env('TWITTER_APP_SECRET'),
-		'redirect' => 'http://mrklog.dev/auth/twitter/callback',
+		'redirect' => 'http://mrklog.com/auth/twitter/callback',
 	],
 
 	'google' => [
 		'client_id' => env('GOOGLEPLUS_APP_ID'),
 		'client_secret' => env('GOOGLEPLUS_APP_SECRET'),
-		'redirect' => 'http://mrklog.dev/auth/google/callback',
+		'redirect' => 'http://mrklog.com/auth/google/callback',
 	],
 
 ];
