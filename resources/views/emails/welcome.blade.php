@@ -12,7 +12,7 @@
         <p>
         	You have succesfully created an account on #mrklog. The next step is to confirm your email address in order to be a certified #mrklog author!
             <br />
-            Start writting...
+            Start writing...
         </p>
 
         <p>

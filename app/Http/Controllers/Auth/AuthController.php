@@ -116,7 +116,7 @@ class AuthController extends Controller {
 	protected function sendConfirmationEmail(array $data, $confirmation_code){
 
 		$logo = [
-			'path' => '/img/logo.png',
+			'path' => asset('img/logo.png'),
 			'width' => '320',
 			'height' => '70',
 		];
