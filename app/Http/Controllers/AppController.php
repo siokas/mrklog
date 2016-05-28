@@ -47,6 +47,15 @@ class AppController extends Controller
 
     /*
     *
+    * Returns the terms view
+    */
+    public function terms(){
+        
+        return view('pages.terms')->withPage('terms');
+    }
+
+    /*
+    *
     * Returns the settings view
     */
     public function settings(){
@@ -100,12 +109,4 @@ class AppController extends Controller
         return redirect(route('posts.index'));
     }
 
-    /*
-    *
-    * Returns the terms view
-    */
-    public function terms(){
-        
-        return redirect(route('pages.terms'));
-    }
 }
