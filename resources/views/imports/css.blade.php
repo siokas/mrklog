@@ -3,10 +3,6 @@
 @endif
 
 @if($page == 'article')
-	<link href="{{ asset('css/themify-icons.css') }} " rel="stylesheet" type="text/css" media="all" />
-	<link href="{{ asset('css/flexslider.min.css') }} " rel="stylesheet" type="text/css" media="all"/>
-	<link href="{{ asset('css/lightbox.min.css') }}" rel="stylesheet" type="text/css" media="all"/>
-	<link href="{{ asset('css/theme.css') }}" rel="stylesheet" type="text/css" media="all"/>
 	<link href="{{ asset('css/tags.css') }}" rel="stylesheet" type="text/css" media="all"/>
 @endif
 

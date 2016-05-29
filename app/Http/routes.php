@@ -85,7 +85,7 @@ Route::delete('user/delete', 'AppController@delete_account')->name('user.delete'
 |
  */
 Route::post('posts/{id}/edit', 'PostController@edit');
-Route::post('send', 'MessageController@send')->name('message');
+Route::post('send', 'MessageController@send')->name('send.message');
 Route::post('settings', 'AppController@save_settings')->name('save.settings');
 
 /*
@@ -158,12 +158,15 @@ Route::group(['prefix' => 'test'], function () {
  */
 
 Route::group(['prefix' => 'api'], function(){
+	
 	Route::group(['prefix' => 'withPagination'], function () {
 		Route::get('posts', 'ApiController@postsWithPagination');
 		Route::get('user/{name}', 'ApiController@postsFromSpesificUserWithPagination');
 		Route::get('tag/{name}', 'ApiController@postsWithSpesificTagWithPagination');
 	});
 
-	Route::get('post/{id}', 'ApiController@postWithSpesificId');
-	Route::get('popular', 'ApiController@popularPosts');
+	Route::group(['prefix' => 'v1'], function () {
+		Route::get('post/{id}', 'ApiController@postWithSpesificId');
+		Route::get('popular', 'ApiController@popularPosts');
+	});
 });

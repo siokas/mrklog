@@ -20,7 +20,7 @@
         @endif
     </head>
 
-    <body>
+    <body style="{{ $page=='article' ? 'font-size: 20px;' : '' }}">
 		{{-- INCLUDE NAVIGATION BAR --}}
 		@include('navigation.bar')
 
@@ -28,7 +28,7 @@
         <div id="main-app">  
         
     		{{-- INCLUDE HEADER --}}
-    		@if($page != 'article')
+    		@if($page != 'article1')
     			@include('sections.header')
     		@endif
 

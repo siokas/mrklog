@@ -18,6 +18,14 @@
                             <input type="email" class="form-control" placeholder="Email Address" value="{{ $data['email'] }}" disabled>
                         </div>
                     </div>
+                    @if(!$data['confirmed'])
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Resend Email Confiramtion Code</label>
+                                <a href="" class="btn btn-default">Resend Code</a>
+                            </div>
+                        </div>
+                    @endif
                     <br />
                     <p style="font-weight: bold; text-decoration: underline;">Post Settings</p>
 

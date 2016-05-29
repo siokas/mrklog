@@ -16,7 +16,6 @@
         "laracasts/utilities": "~2.0",
         "laracasts/flash": "^2.0",
         "snowfire/beautymail": "dev-master",
-        "mpociot/laravel-apidoc-generator": "^1.1",
         "graham-campbell/markdown": "^6.1"
     },
     "require-dev": {

@@ -19,6 +19,11 @@
                 <p>
                     Please click <a href="http://mrklog.com/posts/1">here</a> to read the full <span style="font-family: Molle;">#mrklog</span> guide.
                 </p>
+                <p>
+                    Theme by <a html="http://startbootstrap.com/template-overviews/clean-blog/">Startbootstrap</a>
+                    <br />
+                    Images by <a html="http://unsplash.com">Unsplash</a>
+                </p>
                
             </div>
         </div>

@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration {
 			$table->string('pin');
 			$table->string('tags');
 			$table->bigInteger('views')->default(0);
+			$table->string('image')->nullable();
 			$table->timestamps();
 			$table->softDeletes();
 		});

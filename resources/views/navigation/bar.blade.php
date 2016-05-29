@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="{{ $page=='article' ? 'background:#559dee;' : '' }}">
+{{-- <nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="{{ $page=='article' ? 'background:#559dee;' : '' }}"> --}}
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -9,7 +10,8 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ url('/') }}">
-            <span style="font-family: 'Molle', cursive; color: {{ $page=='article' ? 'background:#fff;' : '#559dee;' }}">#mrklog</span>
+            {{-- <span style="font-family: 'Molle', cursive; color: {{ $page=='article' ? 'background:#fff;' : '#559dee;' }}">#mrklog</span> --}}
+            <span style="font-family: 'Molle', cursive; color: #559dee;">#mrklog</span>
             </a>
         </div>
 

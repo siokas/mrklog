@@ -12,7 +12,6 @@
 .tag {
   background: #eee;
   border-radius: 3px 0 0 3px;
-  color: #999;
   display: inline-block;
   height: 26px;
   line-height: 26px;
@@ -36,7 +35,7 @@
 }
 
 .tag::after {
-  background: #f7f7f7;
+  background: #fff;
   border-bottom: 13px solid transparent;
   border-left: 10px solid #eee;
   border-top: 13px solid transparent;

@@ -36,7 +36,8 @@ class Post extends Model {
 		'certified',
 		'pin',
 		'tags',
-		'user_id'
+		'user_id',
+		'image'
 	];
 
 	public static function boot() {
