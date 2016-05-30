@@ -11,7 +11,7 @@
                       </a>
 
                       <p class="post-meta">Posted by 
-                      <span v-if="post.user_id > 0"><a style="cursor:pointer" v-on:click="to_user($event,1)">@{{ post.author }}</a> <i class="fa fa-certificate" style="color: #559dee;"></i></span>
+                      <span v-if="post.user_id > 0"><a style="cursor:pointer" v-on:click="to_user($event,1)">@{{ post.author }}</a> <i class="fa fa-certificate" style="color: #F5D76E;"></i></span>
                       <span v-else>@{{ post.author }}</span>
                       
 

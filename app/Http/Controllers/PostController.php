@@ -154,7 +154,11 @@ class PostController extends Controller {
 		}
 
 		// Increase the post views variable and save it into the database
-		$post->views++;
+		if(!\Auth::user()) $post->views++;
+		else if(\Auth::user()->name != $post->author) $post->views++;
+
+
+		
 		$post->save(); 
 
 		// Convert the article from markdown to simple html

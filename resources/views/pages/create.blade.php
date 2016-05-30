@@ -5,7 +5,7 @@
 
 	    {!! Form::open(['route' => 'posts.store', 'enctype' => 'multipart/form-data']) !!}
 
-			<textarea id="article" name="article" data-role="none" name="content" data-provide="markdown" rows="25"></textarea>
+			<textarea id="article" name="article" data-role="none" name="content" rows="25"></textarea>
 				
 				<div class="container">
 					<div class="row" style="margin-top: 30px;">

@@ -9,14 +9,15 @@
 <script src="{{ asset('js/moment.js') }}"></script>
 <script src="{{ asset('js/vue.js') }}"></script>
 <script src="{{ asset('js/vue-resource.js') }}"></script>
-<script src="{{ asset('js/custom.js') }}"></script>
 
 @if($page == 'edit' || $page == 'create')
     <script src="{{ asset('js/store.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/bootstrap-markdown.js') }}"></script>
+	<script src="{{ asset('js/custom.js') }}"></script>
 @endif
 
 @if($page == 'main')
 	<script src="{{ asset('js/vue-main.js') }}"></script>
+	<script src="{{ asset('js/custom.js') }}"></script>
 @endif

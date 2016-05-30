@@ -16,7 +16,7 @@
                         <span style="color: #559dee;">
                             {!! Markdown::convertToHtml($post->title) !!}
                         </span>
-                        <span class="meta">Posted by <a href="{{ url('user/'.  $post->author) }}">{{ $post->author }}</a>@if($post->user_id>0)<i class="fa fa-certificate" style="color: #44e321;"></i>@endif on {{$post->created_at}}</span>
+                        <span class="meta">Posted by <a href="{{ url('user/'.  $post->author) }}">{{ $post->author }}</a>@if($post->user_id>0)<i class="fa fa-certificate" style="color: #F5D76E;"></i>@endif on {{$post->created_at}}</span>
                     @elseif ($page == 'about')
                         <h1><span style="font-family: 'Molle', cursive; color: #559dee;">About</span></h1>
                     @elseif ($page == 'contact')
