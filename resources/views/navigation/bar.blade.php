@@ -10,8 +10,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ url('/') }}">
-            {{-- <span style="font-family: 'Molle', cursive; color: {{ $page=='article' ? 'background:#fff;' : '#559dee;' }}">#mrklog</span> --}}
-            <span style="font-family: 'Molle', cursive; color: #559dee;">#mrklog</span>
+            <img src="{{ asset('img/icon.png') }}" width="40" height="40">
             </a>
         </div>
 

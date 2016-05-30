@@ -8,7 +8,7 @@
                     @elseif($page == "edit")
                         <h1><span style="font-family: 'Molle', cursive; color: #559dee;">Update Post</span></h1>
                     @elseif($page == "main")
-                        <img src="{{ asset('img/logo.png') }}" width="320" style="margin-bottom: 5px;">
+                        <img src="{{ asset('img/logo_beta.png') }}" width="320" style="margin-bottom: 5px;">
                         <div class="searchform cf">
                           <input type="text" v-model="keywords" name="keywords" id="keywords" placeholder="keywords, authors or tags" v-on:click="fetchPosts(0)">
                         </div>
