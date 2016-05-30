@@ -19,6 +19,7 @@ class AppController extends Controller
      */
     public function __construct() {
         $this->middleware('auth' ,['only' => ['settings', 'save_settings', 'delete_account'] ]);
+        $this->middleware('confirmation', ['only' => 'resend_code']);
     }
 
     /*
@@ -107,6 +108,39 @@ class AppController extends Controller
         $user->delete();
 
         Flash::warning('Your account has been deleted! From now on you can write non-certified posts.');
+        return redirect(route('posts.index'));
+    }
+
+
+    /*
+    *
+    * Resends the confirmation code
+    */
+    public function resend_code(){
+
+        $user = Auth::user();
+
+        $data = [
+            'email' => $user->email,
+            'name' => $user->name,
+            'confirmation_code' => $user->confirmation_code
+        ];
+        
+        $logo = [
+                'path' => asset('img/logo.png'),
+                'width' => '320',
+                'height' => '70',
+            ];
+
+        $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
+        $beautymail->send('emails.welcome', ['confirmation_code' => $data['confirmation_code'], 'logo' => $logo], function ($message) use ($data) {
+            $message
+                ->from('no-reply@mrklog.com')
+                ->to($data['email'], $data['name'])
+                ->subject('Welcome!');
+        });
+
+        Flash::success('Please checkout your email inbox messages!');
         return redirect(route('posts.index'));
     }
 

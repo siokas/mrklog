@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use App\Http\Requests\Request;
 use App\Models\Post;
 
-class UpdatePostRequest extends Request
+class PostRequest extends Request
 {
 
     /**
@@ -25,6 +25,8 @@ class UpdatePostRequest extends Request
      */
     public function rules()
     {
-        return Post::$rules;
+        return [
+            'article' => 'required|max:10000',
+        ];
     }
 }

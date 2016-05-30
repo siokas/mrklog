@@ -169,7 +169,6 @@ return [
 		Conner\Tagging\Providers\TaggingServiceProvider::class,
 		Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
 		Snowfire\Beautymail\BeautymailServiceProvider::class,
-		Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
 		GrahamCampbell\Markdown\MarkdownServiceProvider::class,
 
 		/*

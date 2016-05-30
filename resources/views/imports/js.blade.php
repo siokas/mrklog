@@ -1,11 +1,8 @@
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/flexslider.min.js') }}"></script>
-{{-- <script src="{{ asset('js/lightbox.min.js') }}"></script> --}}
-{{-- <script src="{{ asset('js/spectragram.min.js') }}"></script> --}}
 <script src="{{ asset('js/smooth-scroll.min.js') }}"></script>
 <script src="{{ asset('js/jquery.plugin.min.js') }}"></script>
-{{-- <script src="{{ asset('js/placeholders.min.js') }}"></script> --}}
 <script src="{{ asset('js/scripts.js') }}"></script>
 <script src="{{ asset('js/marked.min.js') }}"></script>
 <script src="{{ asset('js/to-markdown.js') }}"></script>

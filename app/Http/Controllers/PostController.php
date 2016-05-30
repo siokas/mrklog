@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Auth;
-use App\Http\Requests\CreatePostRequest;
-use App\Http\Requests\UpdatePostRequest;
+use App\Http\Requests\PostRequest;
 use App\Models\Post;
 use App\Models\Setting;
 use App\Repositories\PostRepository;
@@ -83,11 +82,11 @@ class PostController extends Controller {
 	/**
 	 * Store a newly created Post in storage.
 	 *
-	 * @param CreatePostRequest $request
+	 * @param PostRequest $request
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request) {
+	public function store(PostRequest $request) {
 		// Get everything from request and seperate the article into an array of different lines
 		$input = $request->all();
 		$lines = explode("\n", $input['article']);
@@ -196,11 +195,11 @@ class PostController extends Controller {
 	 * Update the specified Post in storage.
 	 *
 	 * @param  int              $id
-	 * @param UpdatePostRequest $request
+	 * @param PostRequest $request
 	 *
 	 * @return Response
 	 */
-	public function update($id, Request $request) {
+	public function update($id, PostRequest $request) {
 		// Get the post from its id and everything from request
 		$post = $this->postRepository->find($id);
 		$input = $request->all();

@@ -18,7 +18,7 @@ class Post extends Model {
 	protected $dates = ['deleted_at'];
 
 	/**
-	 * The attributes that aren't mass assignable.
+	 * Guard the views column
 	 *
 	 * @var array
 	 */
@@ -75,8 +75,8 @@ class Post extends Model {
 	 *
 	 * @return \Illuminate\Database\Eloquent\Builder
 	 */
-	public function scopePopular($query){
-        return $query->orderBy('views', 'desc')->take(5)->get();
+	public function scopePopular($query, $count){
+        return $query->orderBy('views', 'desc')->take($count)->get();
     }
 
 

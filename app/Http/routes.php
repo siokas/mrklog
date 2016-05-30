@@ -10,7 +10,7 @@ use App\Models\Setting;
 |--------------------------------------------------------------------------
 |
 | There is a route resource for the posts (index, create, store, show, edit, update, destroy)
-| and one of each for contact, about and pin pages
+| and one of each for contact, about, pin and terms pages
 |
  */
 Route::resource('posts', 'PostController');
@@ -19,42 +19,11 @@ Route::get('contact', 'AppController@contact');
 Route::get('settings', 'AppController@settings');
 Route::get('pin/{id}', 'AppController@pin');
 Route::get('terms', 'AppController@terms');
+Route::get('mail/resend', 'AppController@resend_code');
 
 Route::get('p', function(){
 	Artisan::call('migrate:refresh', [
     '--force' => true,]);
-});
-
-Route::get('/mail/resend', function(){
-	$data = [
-		'email' => 'apostolossiokas@gmail.com',
-		'name' => 'Apostolos Siokas'
-	];
-	
-	$logo = [
-			'path' => asset('img/logo.png'),
-			'width' => '320',
-			'height' => '70',
-		];
-
-		$beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
-		$beautymail->send('emails.welcome', ['confirmation_code' => 'test', 'logo' => $logo], function ($message) use ($data) {
-			$message
-				->from('no-reply@mrklog.com')
-				->to($data['email'], $data['name'])
-				->subject('Welcome!');
-		});
-
-		Flash::success('Hi ' . $data['name'] . '. In order to be a cerified user you have to confirm your email!');
-});
-
-Route::get('popular', function(){
-	return view('pages.main')
-		->withPage('main') // This is for the blade template in order to know which section to load
-		->withContent('popular')
-		->withTag('')
-		->withUser('')
-		->withSettings(['pagination'=>'no']);
 });
 
 /*
@@ -166,7 +135,10 @@ Route::group(['prefix' => 'api'], function(){
 	});
 
 	Route::group(['prefix' => 'v1'], function () {
+		Route::get('posts', 'ApiController@posts');
 		Route::get('post/{id}', 'ApiController@postWithSpesificId');
-		Route::get('popular', 'ApiController@popularPosts');
+		Route::get('popular/{count}', 'ApiController@popularPosts');
+		Route::get('user/{name}', 'ApiController@postsFromUser');
+		Route::get('tag/{name}', 'ApiController@postsWithTag');
 	});
 });

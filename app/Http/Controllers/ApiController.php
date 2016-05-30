@@ -9,9 +9,9 @@ use Auth;
 class ApiController extends Controller {
 
 	/**
-	 * post
+	 * api/v1/post
 	 *
-	 * This can be an optional longer description of your API call, used within the documentation.
+	 * Returns back all posts.
 	 *
 	 */
 	public function posts() {
@@ -19,29 +19,53 @@ class ApiController extends Controller {
 	}
 
 	/**
-	 * api/post/{id}
+	 * api/v1/post/{id}
 	 *
-	 * This can be an optional longer description of your API call, used within the documentation.
+	 * Returns back a spesific post.
 	 *
+	 * @param $id
 	 */
 	public function postWithSpesificId($id) {
 		return Post::where('id', $id)->get();
 	}
 
 	/**
-	 * api/popular
+	 * api/v1/popular/{count}
 	 *
-	 * This can be an optional longer description of your API call, used within the documentation.
+	 * Returns back most popular posts.
 	 *
+	 * @param $count
 	 */
-	public function popularPosts() {
-		return Post::popular();
+	public function popularPosts($count) {
+		return Post::popular($count);
 	}
 
 	/**
-	 * This is the short description
+	 * api/v1/user/{name}
 	 *
-	 * This can be an optional longer description of your API call, used within the documentation.
+	 * Returns back all posts from a spesific user
+	 *
+	 * @param $name
+	 */
+	public function postsFromUser($name) {
+		return Post::where('author', $name)->latest()->get();
+	}
+
+	/**
+	 * api/v1/tag/{name}
+	 *
+	 * Returns back all posts having a spesific tag
+	 *
+	 * @param $name 
+	 */
+	public function postsWithTag($name) {
+		return Post::withAnyTag([$name])->latest()->get();
+	}
+
+	/**
+	 * api/withPagination/posts
+	 *
+	 * Returns all posts in collection (pagination type)
 	 *
 	 */
 	public function postsWithPagination() {
@@ -85,10 +109,11 @@ class ApiController extends Controller {
 	}
 
 	/**
-	 * This is the short description
+	 * api/withPagination/user/{name}
 	 *
-	 * This can be an optional longer description of your API call, used within the documentation.
+	 * Returns back all posts from a spesific user, in collection (pagination type)
 	 *
+	 * @param $name
 	 */
 	public function postsFromSpesificUserWithPagination($name) {
 		$results = Post::where('author', $name)->latest()->paginate(5);
@@ -108,10 +133,11 @@ class ApiController extends Controller {
 	}
 
 	/**
-	 * This is the short description
+	 * api/withPagination/tag/{name}
 	 *
-	 * This can be an optional longer description of your API call, used within the documentation.
+	 * Returns back all posts having a spesific tag, in collection (pagination type)
 	 *
+	 * @param $name
 	 */
 	public function postsWithSpesificTagWithPagination($name) {
 		$results = Post::withAnyTag([$name])->latest()->paginate(5);
