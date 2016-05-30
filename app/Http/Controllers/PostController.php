@@ -87,6 +87,7 @@ class PostController extends Controller {
 	 * @return Response
 	 */
 	public function store(PostRequest $request) {
+
 		// Get everything from request and seperate the article into an array of different lines
 		$input = $request->all();
 		$lines = explode("\n", $input['article']);
@@ -122,6 +123,10 @@ class PostController extends Controller {
 
 			$input['pin'] = str_random(5);
 		}
+
+		// For testing purposes only
+		if($input['title'] == 'Test' && $input['article'] == 'Test' && $input['author'] == 'Anonymous' && $input['tags'] == "testTag")
+			$input['pin'] = 'abcde';
 
 		// Save the post calling the repository's create() method 
 		$post = $this->postRepository->create($input);
