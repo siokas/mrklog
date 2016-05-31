@@ -19,7 +19,7 @@ class AppController extends Controller
      */
     public function __construct() {
         $this->middleware('auth' ,['only' => ['settings', 'save_settings', 'delete_account'] ]);
-        $this->middleware('confirmation', ['only' => 'resend_code']);
+        $this->middleware('resendConfirmationCode', ['only' => 'resend_code']);
     }
 
     /*

@@ -51,5 +51,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'update_auth' => \App\Http\Middleware\UpdateAuth::class,
         'validateBackHistory' => \App\Http\Middleware\ValidateBackHistory::class,
+        'resendConfirmationCode' => \App\Http\Middleware\ResendConfirmationCode::class,
     ];
 }
