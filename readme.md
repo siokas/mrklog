@@ -16,6 +16,7 @@ Mrklog (Markdown Blog) is as the name itself bespeaks, a simple blog that lets y
 #### Libraries used till now (v 1.0-beta)
 - _Laravel_ as back-end
 - _Vuejs_ and _Vue resource_ as front-end (css: for adding tags to the post)
+- _Discus_ for the commenting system
 - Laravel _Socialite_ for the Social login/signup system
 - _Laravel-Tagging_ by _rtconner_ for the tagging system
 - _Flash_ by _laracasts_ for the flash messages

@@ -21,11 +21,6 @@ Route::get('pin/{id}', 'AppController@pin');
 Route::get('terms', 'AppController@terms');
 Route::get('mail/resend', 'AppController@resend_code');
 
-Route::get('p', function(){
-	Artisan::call('migrate:refresh', [
-    '--force' => true,]);
-});
-
 /*
 |--------------------------------------------------------------------------
 | Auth routes
