@@ -16,7 +16,7 @@
 <!-- for Facebook -->          
 <meta property="og:title" content="Mrklog" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="http://mrklog.com/img/ena.jpg" />
+<meta property="og:image" content="http://mrklog.com/img/icon.png" />
 <meta property="og:url" content="http://mrklog.com" />
 <meta property="og:description" content="A blog that lets you write posts using markdown language without having account! It is the simplest and quickest blog you've ever imagine. Just click CREATE NEW POST and start writting!" />
 
