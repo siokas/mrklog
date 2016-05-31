@@ -3,23 +3,6 @@ function toTheTop(){
 }
 
 		$("#article").markdown({
-			fullscreen: {
-      enable: true,
-      icons: {
-        fullscreenOn: {
-          fa: 'fa fa-expand',
-          glyph: 'glyphicon glyphicon-fullscreen',
-          'fa-3': 'icon-resize-full',
-          octicons: 'octicon octicon-link-external'
-        },
-        fullscreenOff: {
-          fa: 'fa fa-compress',
-          glyph: 'glyphicon glyphicon-fullscreen',
-          'fa-3': 'icon-resize-small',
-          octicons: 'octicon octicon-browser'
-        }
-      }
-    },
   additionalButtons: [
     [{
           name: "groupCustom",

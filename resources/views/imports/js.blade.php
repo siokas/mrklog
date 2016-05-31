@@ -14,7 +14,7 @@
     <script src="{{ asset('js/store.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/bootstrap-markdown.js') }}"></script>
-	<script src="{{ asset('js/custom.js') }}"></script>
+    {{-- // <script src="{{ asset('js/custom.js') }}"></script> --}}
 @endif
 
 @if($page == 'main')

@@ -951,7 +951,7 @@
     width: 'inherit',
     height: 'inherit',
     resize: 'none',
-    iconlibrary: 'glyph',
+    iconlibrary: 'fa',
     language: 'en',
     initialstate: 'editor',
     parser: null,
@@ -1324,7 +1324,56 @@
             }
           }
         }]
-      }]
+      },
+      {
+          name: "groupCustom",
+          data: [{
+            name: "cmdTitle",
+            toggle: true, // this param only take effect if you load bootstrap.js
+            title: "Title",
+            btnText: 'Title',
+            icon: "glyphicon glyphicon-text-size",
+            callback: function(e){
+              // Replace selection with some drinks
+              var chunk, cursor,
+                  selected = e.getSelection(), content = e.getContent(),
+
+              // Give random drink
+              chunk = '# Title'
+
+              // transform selection and set the cursor into chunked text
+              e.replaceSelection(chunk)
+              cursor = selected.start
+
+              // Set the cursor
+              e.setSelection(cursor +2,cursor+chunk.length)
+            }
+          }, 
+          {
+            name: "cmdAuthor",
+            toggle: true, // this param only take effect if you load bootstrap.js
+            title: "Author",
+            btnText: 'Author',
+            icon: "fa fa-user",
+            callback: function(e){
+              // Replace selection with some drinks
+              var chunk, cursor,
+                  selected = e.getSelection(), content = e.getContent(),
+
+              // Give random drink
+              chunk = 'Author: your name'
+
+              // transform selection and set the cursor into chunked text
+              e.replaceSelection(chunk)
+              cursor = selected.start
+
+              // Set the cursor
+              e.setSelection(cursor+8,cursor+chunk.length)
+            }
+          }
+          ]
+    }
+      ]
     ],
     additionalButtons:[], // Place to hook more buttons by code
     reorderButtonGroups:[],
