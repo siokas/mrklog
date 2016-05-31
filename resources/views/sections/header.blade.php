@@ -14,7 +14,8 @@
                         </div>
                     @elseif($page == "article")
                         <span style="font-family: 'Molle', cursive; color: #559dee;">
-                            {!! Markdown::convertToHtml($post->title) !!}
+                            {{-- {!! Markdown::convertToHtml($post->title) !!} --}}
+                            <h1>{{ $title }}</h1>
                         </span>
                         <span class="meta">Posted by <a href="{{ url('user/'.  $post->author) }}">{{ $post->author }}</a>@if($post->user_id>0)<i class="fa fa-certificate" style="color: #F5D76E;"></i>@endif on {{$post->created_at}}</span>
                     @elseif ($page == 'about')

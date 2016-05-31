@@ -162,16 +162,17 @@ class PostController extends Controller {
 		// Increase the post views variable and save it into the database
 		if(!\Auth::user()) $post->views++;
 		else if(\Auth::user()->name != $post->author) $post->views++;
-
-
 		
 		$post->save(); 
+
+		$title = Markdown::convertToHtml($post->title);
+		$textTitle = explode("\n", strip_tags($title));
 
 		// Convert the article from markdown to simple html
 		$article = Markdown::convertToHtml($post->article); 
 		
 		// Return the view passing the necessary data
-		return view('pages.article')->withPost($post)->withPage('article')->withArticle($article);
+		return view('pages.article')->withPost($post)->withPage('article')->withArticle($article)->withTitle($textTitle[0]);
 	}
 
 	/**
