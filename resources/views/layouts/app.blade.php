@@ -5,7 +5,7 @@
     	{{-- IMPORT META TAGS --}}
         @include('imports.meta')
 
-        <title>arklog</title>
+        <title>rklog</title>
 
         {{-- IMPORT CSS STYLES --}}
         @include('imports.css')

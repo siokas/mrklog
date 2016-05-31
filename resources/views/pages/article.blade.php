@@ -22,6 +22,7 @@
 					@include('imports.social_links')
 	            </div>
 	        </div>
+	        @include('imports.comments')
 	    </div>
 	</article>
 @endsection
