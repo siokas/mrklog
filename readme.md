@@ -1,5 +1,6 @@
 
 # Mrklog
+[![Build Status](https://travis-ci.org/siokas/mrklog.svg?branch=master)](https://travis-ci.org/siokas/mrklog)
 
 Mrklog (Markdown Blog) is as the name itself bespeaks, a simple blog that lets you create articles writing in markdown language. It is created using [Laravel PHP Framework](http://laravel.com) for the back-end and [Vue.js](http://vuejs.org/) for the front-end. Laravel creates the API and Vue.js displays the posts. The search feature is instant (that's why I do not include a button) as you write as well as the pagination pages (thanks to Vue.js)! This gives a nice and innovative feeling.
 
