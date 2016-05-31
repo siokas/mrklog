@@ -5,6 +5,10 @@
 [![GitHub version](https://badge.fury.io/gh/siokas%2Fmrklog.svg)](https://badge.fury.io/gh/siokas%2Fmrklog)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/364b00ef32d74d068c84ffb1b8b204ac)](https://www.codacy.com/app/apostolossiokas/mrklog?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=siokas/mrklog&amp;utm_campaign=Badge_Grade)
 [![Join the chat at https://gitter.im/siokas/mrklog](https://badges.gitter.im/siokas/mrklog.svg)](https://gitter.im/siokas/mrklog?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Coverage Status](https://coveralls.io/repos/github/bfontaine/badges2svg/badge.svg?branch=master)](https://coveralls.io/github/bfontaine/badges2svg?branch=master)
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000)]()
+[![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/siokas/mrklog/master/LICENSE)
+
 
 Mrklog (Markdown Blog) is as the name itself bespeaks, a simple blog that lets you create articles writing in markdown language. It is created using [Laravel PHP Framework](http://laravel.com) for the back-end and [Vue.js](http://vuejs.org/) for the front-end. Laravel creates the API and Vue.js displays the posts. The search feature is instant (that's why I do not include a button) as you write as well as the pagination pages (thanks to Vue.js)! This gives a nice and innovative feeling.
 
