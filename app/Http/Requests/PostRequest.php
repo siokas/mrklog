@@ -26,7 +26,7 @@ class PostRequest extends Request
     public function rules()
     {
         return [
-            'article' => 'required|max:10000',
+            'article' => 'max:10000',
         ];
     }
 }

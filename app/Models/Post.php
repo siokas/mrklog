@@ -44,10 +44,12 @@ class Post extends Model {
 		parent::boot();
 
 		static::created(function ($page) {
+			if($page->attributes['tags'])
 			$page->tag(explode(',', $page->attributes['tags']));
 		});
 
 		static::updated(function ($page) {
+			if($page->attributes['tags'])
 			$page->retag(explode(',', $page->attributes['tags']));
 		});
 	}

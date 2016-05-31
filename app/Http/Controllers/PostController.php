@@ -93,7 +93,8 @@ class PostController extends Controller {
 		$lines = explode("\n", $input['article']);
 
 		// Get the tags from request and the title from the first line of the article
-		$input['tags'] = $request->tags;
+		if($request->tags) $input['tags'] = $request->tags;
+		
 		$input['title'] = $lines[0];
 
 		/**
