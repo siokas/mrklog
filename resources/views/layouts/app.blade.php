@@ -10,6 +10,8 @@
         {{-- IMPORT CSS STYLES --}}
         @include('imports.css')
 
+        {{-- @include('imports.analytics') --}}
+
         <script src="{{ asset('js/marked.js') }}"></script>
 
         {{-- PRE-IMPORT NEEDED JS SCRIPTS --}}
@@ -21,6 +23,9 @@
     </head>
 
     <body style="{{ $page=='article' ? 'font-size: 20px;' : '' }}">
+
+        @include('imports.google_tags')
+        
 		{{-- INCLUDE NAVIGATION BAR --}}
 		@include('navigation.bar')
 

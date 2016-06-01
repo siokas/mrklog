@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Setting;
+use App\Models\DefaultSetting;
 use Auth;
 
 class ApiController extends Controller {
@@ -69,9 +70,16 @@ class ApiController extends Controller {
 	 *
 	 */
 	public function postsWithPagination() {
+
+		$defaults = DefaultSetting::findOrFail(1);
 		$orderBy = '';
-		$onlyCertified = false;
-		$pagination_count = 5;
+		$onlyCertified = $defaults['certified'];
+		$pagination_count = $defaults['pagination_count'];
+
+		if($defaults['show_first'] == 'show-1') $orderBy = 'id';
+        if($defaults['show_first'] == 'show-2') $orderBy = 'updated_at';
+        if($defaults['show_first'] == 'show-3') $orderBy = 'certified';
+        if($defaults['show_first'] == 'show-4') $orderBy = 'views';
 
 		if(Auth::user()){
 			$user = Auth::user();
@@ -84,7 +92,7 @@ class ApiController extends Controller {
 	        if($settings['show_first'] == 'show-2') $orderBy = 'updated_at';
 	        if($settings['show_first'] == 'show-3') $orderBy = 'certified';
 	        if($settings['show_first'] == 'show-4') $orderBy = 'views';
-		}else $orderBy = 'id';
+		}
 
 		$results = Post::orderBy($orderBy, 'desc')->paginate($pagination_count);
 		
