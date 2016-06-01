@@ -24,7 +24,7 @@
 
     <body style="{{ $page=='article' ? 'font-size: 20px;' : '' }}">
 
-        @include('imports.google_tags')
+        {{-- @include('imports.google_tags') --}}
         
 		{{-- INCLUDE NAVIGATION BAR --}}
 		@include('navigation.bar')
