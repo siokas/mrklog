@@ -58,12 +58,8 @@ class PostController extends Controller {
 			$user = \Auth::user();
 	        $settings = Setting::findOrFail($user->setting_id);
 		}
-
-		$defaults = DefaultSetting::findOrFail(1);
-		$pinToTop = null;
-
-		if($defaults['pinToTop'] != '*')
-			$pinToTop = Post::where('pin', '00000')->first();
+		
+		$pinToTop = Post::where('pin', '00000')->first();
 		
 
 		// Finally return the view with all the data
