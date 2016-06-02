@@ -2,9 +2,11 @@
 
 @section('content')
   <div class="container">
-  @if($pinToTop)
-    @include('custom.pinToTop')
-  @endif
+  {{-- ADD PIN TO TOP POST  --}}
+    @if($pinToTop)
+      @include('custom.pinToTop')
+    @endif
+
       <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
               <div id="mark" v-for="post in list  | filterBy keywords in 'article' 'tags' ">

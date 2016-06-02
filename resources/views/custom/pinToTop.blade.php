@@ -3,7 +3,7 @@
     <div style="margin-top: 20px;">Pined To Top Post</div>
             <div class="post-preview">
                 <a href="/posts/{{ $pinToTop->id }}">
-                    <h2 class="post-title">{{ $pinToTop->title }}</h2>
+                    <h2 class="post-title">{!! Markdown::convertToHtml($pinToTop->title) !!}</h2>
                 </a>
 
                 <p class="post-meta">Posted by 
