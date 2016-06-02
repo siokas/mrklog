@@ -23,13 +23,11 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(Post::class, function (Faker\Generator $faker) {
-    $tag1 = $faker->word;
-    $tag2 = $faker->word;
     return [
         'title' => $faker->sentence,
         'article' => $faker->paragraph,
         'author' => $faker->name,
         'pin' => str_random(5),
-        'tags' => $tag1 . ',' . $tag2,
+        'tags' => $faker->word . ',' . $faker->word,
     ];
 });

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+    <title>404-mrklog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">

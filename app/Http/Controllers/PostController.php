@@ -173,6 +173,8 @@ class PostController extends Controller {
 
 		// Convert the article from markdown to simple html
 		$article = Markdown::convertToHtml($post->article); 
+
+		$img = explode('<img', $article);
 		
 		// Return the view passing the necessary data
 		return view('pages.article')->withPost($post)->withPage('article')->withArticle($article)->withTitle($textTitle[0]);
