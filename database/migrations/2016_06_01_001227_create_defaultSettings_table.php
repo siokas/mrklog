@@ -20,6 +20,7 @@ class CreateDefaultSettingsTable extends Migration
             $table->integer('pagination_count')->default(5);
             $table->boolean('pagination_type')->default(0);
             $table->string('date_format')->default('LL');
+            $table->string('pinToTop')->default('0');
         });
     }
 

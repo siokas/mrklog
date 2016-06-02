@@ -5,6 +5,7 @@ namespace App\Models;
 use Conner\Tagging\Taggable;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Response;
 
 class Post extends Model {
 
@@ -79,6 +80,19 @@ class Post extends Model {
 	 */
 	public function scopePopular($query, $count){
         return $query->orderBy('views', 'desc')->take($count)->get();
+    }
+
+    /**
+	 * Scope a query to incude only the top 5 popular posts.
+	 *
+	 * @return \Illuminate\Database\Eloquent\Builder
+	 */
+	public function scopePinToTop($query, $pin, $orderBy){
+        $pinToTop = $query->where('pin', $pin)->first();
+        $restPosts = $query->where('pin', '!=', $pin)->orderBy($orderBy, 'desc');
+        // $array = (object) array_merge((array)$pinToTop, (array)$restPosts);
+        // return (Response::json(collect($array)));
+        return $query->where('pin', $pin);
     }
 
 

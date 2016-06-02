@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth;
 use App\Http\Requests\PostRequest;
 use App\Models\Post;
 use App\Models\Setting;
+use App\Models\DefaultSetting;
 use App\Repositories\PostRepository;
 use Flash;
 use Illuminate\Http\Request;
@@ -58,6 +59,11 @@ class PostController extends Controller {
 	        $settings = Setting::findOrFail($user->setting_id);
 		}
 
+		$defaults = DefaultSetting::findOrFail(1);
+		$pinToTop = null;
+
+		if($defaults['pinToTop'] != '*')
+			$pinToTop = Post::where('pin', '00000')->first();
 		
 
 		// Finally return the view with all the data
@@ -66,6 +72,7 @@ class PostController extends Controller {
 		->with('content', $content)
 		->with('tag', $tag)
 		->with('user', $user)
+		->with('pinToTop', $pinToTop)
 		->withSettings($settings);
 	}
 

@@ -171,6 +171,7 @@ return [
 		Snowfire\Beautymail\BeautymailServiceProvider::class,
 		GrahamCampbell\Markdown\MarkdownServiceProvider::class,
 
+
 		/*
 			         * Application Service Providers...
 		*/

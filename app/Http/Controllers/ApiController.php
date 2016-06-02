@@ -95,12 +95,17 @@ class ApiController extends Controller {
 		}
 
 		$results = Post::orderBy($orderBy, 'desc')->paginate($pagination_count);
-		
-		if($onlyCertified){
-			$results = Post::where('certified', 1)->orderBy($orderBy, 'desc')->paginate($pagination_count);
-		}
 
+
+		$pin = $defaults['pinToTop'];
+		if($pin != '*'){
+			$results = Post::where('pin', '!=' , $pin)->orderBy($orderBy, 'desc')->paginate($pagination_count);
+		}
 		
+		if($onlyCertified)
+			$results = Post::where('certified', 1)->orderBy($orderBy, 'desc')->paginate($pagination_count);
+
+
 		$response = [
 			'pagination' => [
 				'total' => $results->total(),
