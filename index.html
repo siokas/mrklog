@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mrklog by siokas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Mrklog</h1>
+      <h2 class="project-tagline">Laravel and VueJs Blog</h2>
+      <a href="https://github.com/siokas/mrklog" class="btn">View on GitHub</a>
+      <a href="https://github.com/siokas/mrklog/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/siokas/mrklog/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="mrklog" class="anchor" href="#mrklog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mrklog</h1>
+
+<p><a href="https://travis-ci.org/siokas/mrklog"><img src="https://travis-ci.org/siokas/mrklog.svg?branch=master" alt="Build Status"></a>
+<a href="https://www.codacy.com/app/apostolossiokas/mrklog?utm_source=github.com&amp;amp;utm_medium=referral&amp;amp;utm_content=siokas/mrklog&amp;amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/364b00ef32d74d068c84ffb1b8b204ac" alt="Codacy Badge"></a>
+<a href="https://gitter.im/siokas/mrklog?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/siokas/mrklog.svg" alt="Join the chat at https://gitter.im/siokas/mrklog"></a>
+<a href="https://coveralls.io/github/bfontaine/badges2svg?branch=master"><img src="https://coveralls.io/repos/github/bfontaine/badges2svg/badge.svg?branch=master" alt="Coverage Status"></a>
+<a href="http://standardjs.com/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="js-standard-style"></a>
+<a href=""><img src="https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000" alt="GitHub release"></a>
+<a href="https://raw.githubusercontent.com/siokas/mrklog/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-blue.svg" alt="GitHub license"></a></p>
+
+<p>Mrklog (Markdown Blog) is as the name itself bespeaks, a simple blog that lets you create articles writing in markdown language. It is created using <a href="http://laravel.com">Laravel PHP Framework</a> for the back-end and <a href="http://vuejs.org/">Vue.js</a> for the front-end. Laravel creates the API and Vue.js displays the posts. The search feature is instant (that's why I do not include a button) as you write as well as the pagination pages (thanks to Vue.js)! This gives a nice and innovative feeling.</p>
+
+<h4>
+<a id="all-features" class="anchor" href="#all-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>All Features</h4>
+
+<ul>
+<li>Accountless way to create post</li>
+<li>Smart system detects if you post an article without having account and produce a 5 digit random string (pin) to let user edit/delete</li>
+<li>Markdown lang editor for editing posts</li>
+<li>Full authentication system with Facebook and Google+ support</li>
+<li>Tags support on posts</li>
+<li>Confirmation email feature (with code)</li>
+</ul>
+
+<h4>
+<a id="libraries-used-till-now-v-10-beta" class="anchor" href="#libraries-used-till-now-v-10-beta" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Libraries used till now (v 1.0-beta)</h4>
+
+<ul>
+<li>
+<em>Laravel</em> as back-end</li>
+<li>
+<em>Vuejs</em> and <em>Vue resource</em> as front-end (css: for adding tags to the post)</li>
+<li>
+<em>Disqus</em> for the commenting system</li>
+<li>Laravel <em>Socialite</em> for the Social login/signup system</li>
+<li>
+<em>Laravel-Tagging</em> by <em>rtconner</em> for the tagging system</li>
+<li>
+<em>Flash</em> by <em>laracasts</em> for the flash messages</li>
+<li>
+<em>Beautymail</em> by <em>snowfire</em> for nice looking email</li>
+<li>
+<em>l5-repository</em> by <em>prettus</em> for the repository system</li>
+<li>
+<em>Markdown</em> by <em>graham-campbell</em> to markdown the content on the laravel side</li>
+<li>
+<em>marked</em> by <em>chjj</em> to markdown the content on the javascript side</li>
+<li>
+<em>bootstrap-markdown</em> by <em>toopay</em> for the markdown editor</li>
+<li>jquery.js</li>
+<li>bootstrap.js</li>
+<li>pe-icon-7-stroke</li>
+<li>font awsome</li>
+<li>Molle font</li>
+<li>Theme by <em>Startbootstrap.com</em> </li>
+<li>Images by <em>Unsplash.com</em>
+</li>
+</ul>
+
+<h2>
+<a id="about-the-blog" class="anchor" href="#about-the-blog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About the blog</h2>
+
+<p>You can CRUD posts, add tags to them and also link every media you can think of (youtube, twitter, instagram, spotify etc). Everyone can create an account using Facebook, GooglePlus or just your personal email. Finally, I created a public API that can help developers to create apps about mrklog.</p>
+
+<p>But the main question is: “What differs mrklog from other blog sites?” The answer is that mrklog lets users create articles <strong>WITHOUT</strong> having account! So everyone is welcome to write anything he/she wants even without logging in into the system! Tell me what’s quicker than that?</p>
+
+<h4>
+<a id="how-to-crud-without-account" class="anchor" href="#how-to-crud-without-account" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to CRUD without account</h4>
+
+<p>There is a simple but clever way to update and/or delete posts you have created without account. At the moment you create an article, the success flash message gives you back a 5 string random generated pin code. In order to make changes to this article you have to provide this exact pin code. Of course if the user want to create an account there is no need to have pin code (just log in).</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>The mrklog app is licensed under the <a href="http://opensource.org/licenses/Apache-2.0">Apache License</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/siokas/mrklog">Mrklog</a> is maintained by <a href="https://github.com/siokas">siokas</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
